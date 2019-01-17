@@ -1,6 +1,15 @@
 #include <gtest/gtest.h>
 
-TEST(sample_test_case, sample_test)
+#include "include/my_class.test.cc"
+
+TEST(myclass1_test_case, myclass1_test)
+{
+    auto a = MyClass();
+    a.doSomething();
+    EXPECT_EQ(a.value, 1);
+}
+
+TEST(sample1_test_case, sample1_test)
 {
     EXPECT_EQ(1, 1);
 }
